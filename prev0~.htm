@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAEC Yukti Fest</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    // Scroll Reveal Effect
+    window.addEventListener('scroll', function() {
+        let reveals = document.querySelectorAll('.reveal');
+
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    });
+
+    // Button & Link Click Animation
+    document.querySelectorAll(".btn, a").forEach((element) => {
+        element.addEventListener("click", function(e) {
+            let ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+            this.appendChild(ripple);
+
+            let x = e.clientX - this.getBoundingClientRect().left;
+            let y = e.clientY - this.getBoundingClientRect().top;
+
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+</script>
+
+<body>
+    <div class="neon-container">
+    <div class="neon-strip"></div>
+    <div class="neon-strip"></div>
+    <div class="neon-strip"></div>
+    <div class="neon-strip"></div>
+    <div class="neon-strip"></div>
+</div>
+
+    <header>
+        <nav>
+            <h1>LAEC Yukti-Fest 2K25</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header><section id="hero" class="reveal">
+         <div class="college-banner">
+        <img src="college-logo.png" alt="college Banner">
+        </div>
+    <h2>Welcome to Yukti Fest 2025</h2>
+    <p>The biggest tech and cultural fest of LAEC is here!</p>
+    <a href="#register" class="btn">Register Now</a>
+</section>
+<br>
+
+<div class="neon-strip" style="top: 80%; left: 70%;"></div>
+
+
+<section id="about"
+class="section-box reveal">
+    <h2>About Yukti Fest</h2>
+    <p>Yukti Fest is an annual event showcasing technical and cultural talents.</p>
+
+</section>
+
+<section id="events"
+class="secion-box reveal">
+    <h2>Our Events</h2>
+    <ul>
+        <li>Technical Hackathons</li>
+        <li>Cultural Performances</li>
+        <li>Gaming Competitions</li>
+    </ul>
+
+</section>
+
+<section id="register">
+    <div class="section-box">
+    <h2>Register Now</h2>
+    <p>Join the biggest fest of the year!</p>
+    <a href="register.html" class="register-btn">Register heres</a>
+    </div>
+</section>
+<br>
+<div class="neon-strip" style="top: 80%; left: 30%;"></div>
+
+<footer>
+    <p>© 2025 LAEC Yukti Fest | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

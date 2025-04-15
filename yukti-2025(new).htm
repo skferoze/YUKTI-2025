@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAEC Yukti Fest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<script>
+    // Toggle dropdown for categories
+    document.querySelectorAll('.events-category h3').forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+
+<script>
+    // Scroll Reveal Effect
+    window.addEventListener('scroll', function () {
+        let reveals = document.querySelectorAll('.reveal');
+
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    });
+
+    // Button & Link Click Animation
+    document.querySelectorAll(".btn, a").forEach((element) => {
+        element.addEventListener("click", function (e) {
+            let ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+            this.appendChild(ripple);
+
+            let x = e.clientX - this.getBoundingClientRect().left;
+            let y = e.clientY - this.getBoundingClientRect().top;
+
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+    });
+</script>
+
+<style>
+    /* Dropdown Arrow */
+    .arrow {
+        margin-left: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .active .arrow {
+        transform: rotate(180deg);
+    }
+
+
+
+    .ticker {
+        display: inline-block;
+        animation: scroll-left 20s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    .header-logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 0px;
+        background-color: #202020;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+</style>
+
+<body>
+
+    <div class="neon-container">
+        <div class="neon-strip"></div>
+        <div class="neon-strip"></div>
+        <div class="neon-strip"></div>
+        <div class="neon-strip"></div>
+        <div class="neon-strip"></div>
+
+    </div>
+    <div class="header-logo-container">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="./Sb2-2.png" alt="LAEC Logo">
+            <div>
+                <a href="https://www.lingaraj-appaec.in/">
+                    <h1 class="gradient-heading">LAEC BIDAR</h1>
+                </a>
+                <p
+                    style="color: #fff; font-size: 12px; margin: 0; font-family: 'Eurosotile',sans-serif; letter-spacing: 1px; font-weight: 500; margin-top: 10px;">
+                    Approved by AICTE and Affiliated to VTU Belgaum</p>
+            </div>
+        </div>
+        <div class="middle-banner">
+            <img src="college-banner.png"
+                style="height: 70px; width: 350px; border-radius: 10px; border: 2px solid #0ff; box-shadow: 0 0 10px #0ff, 0 0 20px magenta; margin-right:90px;">
+
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#events">Events</a></li>
+                <button class="neon-btn">Register</button>
+
+            </ul>
+        </nav>
+    </div>
+    <div class="event-strip-1">
+        <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();"
+            onmouseout="this.start();">
+            📅 Event Dates: May 07-08, 2025
+            <span class="magenta-star">★</span>
+            🧩 Tech-Treasure Hunt, Quiz, Coding, PPt
+            <span class="magenta-star">★</span>
+            🔄 Event Schedule Updated
+            <span class="flicker-star">✴</span>
+            🧾 Register Now!
+            <span class="magenta-star">★</span>
+            🎮 Gaming Zone Added
+        </marquee>
+    </div>
+
+    <div class="event-strip-2">
+        <span class="updates-btn">UPDATES</span>
+        <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();"
+            onmouseout="this.start();">
+            📘 Brochure Updated
+            <span class="magenta-star">★</span>
+            🧾 Registeration open!
+            <span class="magenta-star">★</span>
+            🌙 Don’t Miss the DJ Night
+            <span class="magenta-star">★</span>
+            🧠 Tech Quiz Announced
+            <span class="magenta-star">★</span>
+            🕺 Artists Revealed!
+        </marquee>
+    </div>
+    <section class="hero-section">
+        <div class="slideshow-bg"></div>
+        <div class="hero-content">
+            <span class="laec">
+                <h1>LAEC</h1>
+            </span>
+            <h2>BIDAR</h2>
+            <p style="font-size: 23px; font-weight: 400;">Presents</p>
+            <div class="kite">
+                <h1>TECHN<span class="stylish-o">O</span>TSAV YU<span class="stylish-k">K</span>TI - 2<span
+                        class="stylish-zero">0</span>25</h1>
+            </div>
+
+            <h3 style="font-size: 40px; letter-spacing: 2px;">Redefining Ideas, Reshaping Futures</h3>
+            <p class="hero-presents">REGIONAL LEVEL TECHNO-MANAGEMENT-CULTURAL FEST</p>
+        </div>
+    </section>
+
+    <section id="hero" class="reveal">
+        <h2>Welcome to Technotsav Yukti Fest 2025</h2>
+        <p>The biggest tech and cultural fest of LAEC is here!</p>
+        <a href="#register" class="btn">Register Now</a>
+    </section>
+    <div style="border-top: 1px solid #0ff5;"></div>
+    <br>
+
+    <section id="about" class="section-box reveal">
+        <h2>About Yukti Fest</h2>
+        <p>
+            <span style="color:#00ffff;">🔷TECHNOTSAV YUKTI-2025 </span>: Unleashing Innovation and Energy
+            Hosted by Lingaraj Appa Engineering College, Bidar.
+            The ultimate fusion of innovation, creativity, and competition! Held at the heart of Bidar’s pride —<span
+                style="color:magenta;"> Lingaraj Appa Engineering College.</span>
+            — This year’s fest is set to break boundaries and light up the campus with futuristic energy.
+
+            🌀 From mind-bending tech challenges to adrenaline-pumping sports events. Yukti isn't just a fest — it's a
+            movement.
+            Whether you're a code wizard, a creative rebel, or a sports beast,<span style="color:magenta;"> YUKTI-2025
+            </span> is the platform where your talent gets the spotlight it deserves.
+        </p>
+    </section>
+    <br>
+    <div style="border-top: 2px solid #0ff5;"></div>
+    <br>
+    <div class="artist-section">
+        <h2 class="cyberpunk-heading">ARTIST ANNOUNCEMENT</h2>
+        <div class="artist-box">
+            <div class="artist-image">
+                <img src="suhana-syed.jpeg" alt="Suhana Syed">
+            </div>
+            <div class="artist-details">
+                <h3 class="neon-title">Featured Artist: <span style="color: white" ;> Suhana Syed</span></h3>
+                <p class="neon-text">
+                    We are electrified to announce that the sensational voice of<span style="color: #00ffff" ;>' Suhana
+                        Syed '</span> will be lighting up the Yukti 2025 stage! Known for her soul-stirring Sufi
+                    melodies and electrifying performances, Suhana brings a fusion of <span style="color:magenta" ;>'
+                        tradition and trance '</span> that leaves audiences mesmerized.
+                </p>
+                <p class="neon-text">
+                    Her magnetic presence and genre-bending music style make her a must-see at this year's celebration
+                    of innovation and imagination.<span style="color:magenta" ;>' Prepare to lose yourself in her voice!
+                        '</span>
+                </p>
+                <p class="neon-text"><strong style="color:#00ffff">Date:</strong> May 7, 2025<br>
+                    <strong style="color:#00ffff">Venue:</strong> LAEC Campus Stage<br>
+                    <strong>Follow Us On Instagram:</strong> <span class="highlight">@LAEC_COMMUNITY</span> for more
+                    updates
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include fonts in <head> -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Montserrat&display=swap"
+        rel="stylesheet">
+
+    <!-- Rajat Hegde Artist Section -->
+    <div class="artist-box">
+        <div class="artist-image">
+            <img src="ranjeeth-hegde.jpeg" alt=" Rajat Hegde">
+        </div>
+        <div class="artist-details">
+            <h2>Special Musical Act By : <span style="color:white">RAJAT HEGDE</span></h2>
+            <p>Gear up for an unforgettable musical explosion by the dynamic <span class="highlight">Rajat Hegde</span>
+                — a powerhouse performer known for setting stages on fire with his voice and energy.</p>
+
+            <p><strong style="color:#00ffff">Achievements:</strong></p>
+            <ul>
+                <li>Winner of Campus Idol (2023)</li>
+                <li>Viral Kannada Fusion Track – "Hrudaya Pulse"</li>
+                <li>YouTube Rising Star 2024</li>
+            </ul>
+
+            <p><strong style="color:#00ffff">Venue:</strong> LAEC Campus</p>
+            <p><strong style="color:#00ffff">Date:</strong> May 8, 2025</p>
+            <p><strong style="color:#00ffff">Time:</strong> 7:30 PM onwards</p>
+
+            <p>Follow us on Instagram <span class="highlight">@LAEC_COMMUNITY</span> for updates</p>
+        </div>
+    </div>
+    <br>
+
+    <div style="border-top: 2px solid #0ff5;"></div>
+
+
+
+    <section id="register">
+        <div class="section-box">
+            <h2>Register Now</h2>
+            <p>Join the biggest fest of the year!</p>
+            <a href="register.html" class="register-btn">Register here</a>
+        </div>
+    </section>
+    <br>
+
+    <footer>
+        <p>© 2025 LAEC Yukti Fest | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

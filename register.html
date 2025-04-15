@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukti Fest Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+            color: #00fff7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #00fff7;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px #00fff7;
+            width: 90%;
+            max-width: 500px;
+            animation: neonFade 2s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff00cc;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1f1f1f;
+            color: #00fff7;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #ff00cc;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #ff66e7;
+        }
+
+        @keyframes neonFade {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Yukti Fest Registration</h2>
+
+        <!-- Step 1: Basic Details -->
+        <div class="form-step" id="step1">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <button onclick="nextStep(2)">Next</button>
+        </div>
+
+        <!-- Step 2: Select Event -->
+        <div class="form-step" id="step2" style="display: none;">
+            <label for="event">Select Event:</label>
+            <select id="event">
+                <option value="">Choose an event</option>
+                <option value="Technical">Technical Event</option>
+                <option value="Sports">Sports Event</option>
+                <option value="Cultural">Cultural Event</option>
+            </select>
+
+            <button onclick="prevStep(1)">Back</button>
+            <button onclick="nextStep(3)">Next</button>
+        </div>
+
+        <!-- Step 3: Additional Details -->
+        <div class="form-step" id="step3" style="display: none;">
+            <label for="details">Additional Details:</label>
+            <textarea id="details" placeholder="Any additional details"></textarea>
+
+            <button onclick="prevStep(2)">Back</button>
+            <button onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

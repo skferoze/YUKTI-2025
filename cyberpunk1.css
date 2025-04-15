@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: radial-gradient(ellipse at top, #0f0c29, #302b63, #24243e);
+    color: #00f7ff;
+    overflow-x: hidden;
+}
+
+header, footer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav h1 {
+    font-size: 2rem;
+    color: #f0f;
+    text-shadow: 0 0 6px #f0f;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #00f7ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #00f7ff;
+}
+
+.section-box {
+    padding: 40px 20px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #0ff;
+    border-radius: 10px;
+    width: 80%;
+    box-shadow: 0 0 15px #00f7ff66;
+}
+
+h2 {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff99;
+}
+
+a.btn, .register-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+a.btn:hover, .register-btn:hover {
+    background: #0ff;
+    color: #000;
+}
+
+.neon-strip {
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: #f0f;
+    box-shadow: 0 0 10px #f0f, 0 0 20px #f0f;
+    transform: rotate(45deg);
+}
+
+footer p {
+    color: #aaa;
+    font-size: 14px;
+}
