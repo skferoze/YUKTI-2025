@@ -7,7 +7,59 @@
     <title>LAEC Yukti Fest</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Mobile friendly overrides */
+        @media (max-width: 768px) {
+            .header-logo-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 10px;
+            }
 
+            .middle-banner img {
+                width: 90%;
+                height: auto;
+                margin: 10px 0;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .hero-section {
+                flex-direction: column;
+                padding: 20px;
+                height: auto;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .kite h1 {
+                font-size: 2.2rem;
+            }
+
+            .artist-box {
+                flex-direction: column;
+                margin: 20px;
+                padding: 10px;
+            }
+
+            .artist-image img {
+                width: 90%;
+                margin: 10px auto;
+            }
+        }
+    </style>
 </head>
 <script>
     // Toggle dropdown for categories
