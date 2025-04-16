@@ -151,12 +151,11 @@
     }
 
     .header-logo-container {
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 0px 0px;
-        background-color: inherit;
+        background-color: #202020;
         gap: 20px;
         flex-wrap: wrap;
     }
